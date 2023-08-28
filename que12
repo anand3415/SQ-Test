@@ -1,6 +1,1 @@
-SELECT *
-FROM student
-WHERE age = (
-    SELECT MIN(age)
-    FROM student
-);
+SELECT * FROM student WHERE age = (SELECT MIN(age) FROM student);
