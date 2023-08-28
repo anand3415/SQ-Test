@@ -1,0 +1,15 @@
+SELECT
+  shortest
+FROM
+  (
+    SELECT
+      x1,
+      y1,
+      SQRT((x2 - x1)^2 + (y2 - y1)^2) AS shortest
+    FROM
+      plane_note
+    ORDER BY
+      shortest
+    LIMIT
+      1
+  ) AS t;
