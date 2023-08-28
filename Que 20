@@ -1,0 +1,8 @@
+SELECT
+  books.title,
+  SUM(orders.quantity) AS total_quantity
+FROM books
+JOIN orders ON books.book_id = orders.book_id
+GROUP BY books.title
+ORDER BY total_quantity DESC
+LIMIT 3;
